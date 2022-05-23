@@ -1,4 +1,4 @@
-# shop_vue
+# E-commerce Vue js
 
 ## Project setup
 ```
