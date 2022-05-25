@@ -12,7 +12,7 @@
       <router-link class="p-2 text-lg text-black" to="/winter">Winter</router-link>
       <router-link class="p-2 mx-2 bg-green-600 rounded-md text-white" to="/login">Login</router-link>
       <router-link class="p-2 mx-2 bg-blue-700 rounded-md text-white" to="/cart">
-        <box-icon class="align-middle" name='cart' color="#FFF"></box-icon>
+        <box-icon class="align-middle" name='cart' color="#FFF"></box-icon> Cart
       </router-link>
     </div>
   </nav>

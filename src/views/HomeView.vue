@@ -12,13 +12,15 @@
       </div>
       <section class="flex space-x-5 m-10">
         <div v-for="product in lastestProducts" :key="product.id">
-          <div class="shadow-2xl p-2 bg-white">
+          <div class="shadow-2xl p-4 bg-white">
             <figure>
               <img :src="product.get_thumbnail" alt="">
             </figure>
-            <h3 class="text-center">{{ product.name }}</h3>
-            <p class="text-center"> {{ product.price }}</p>
-            <p class="text-center">View details</p>          
+            <div class="flex flex-col justify-center items-center">
+              <h3 class="text-center">{{ product.name }}</h3>
+              <p class="text-center text-gray-600">$ {{ product.price }}</p>
+              <router-link :to="product.get_absolute_url" class="p-2 m-1 bg-gray-700 text-white rounded-md">View details</router-link>
+            </div>
           </div>
         </div>
       </section>
