@@ -15,7 +15,7 @@ import axios from 'axios';
                     <p><strong>Price: </strong>${{ product.price }}</p>
                     <div class="flex">
                         <input class="w-1/3 p-2" type="number" min="1" v-model="quantity">
-                        <a href="" class="bg-green-600 p-2 rounded-md">Add to cart</a>
+                        <button @click="addToCart" class="bg-green-600 p-2 rounded-md">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -48,6 +48,16 @@ export default {
                 }).catch(error => {
                     console.log(error);
                 })
+        },
+        addToCart(){
+            if(isNaN(this.quantity) || this.quantity < 1){
+                this.quantity = 1
+            }
+            const item = {
+                product : this.product,
+                quantity : this.quantity
+            }
+            this.$store.commit('addToCart', item)
         }
     },
 }
